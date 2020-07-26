@@ -77,16 +77,16 @@ def get_playable_podcast1(soup1):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/somoneknowssomething-promo.jpg",
         }
-        subjects.append(item) 
+        subjects.append(item)
     return subjects
 def compile_playable_podcast1(playable_podcast1):
     items = []
@@ -108,14 +108,14 @@ def get_playable_podcast2(soup2):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-more-sm.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -139,14 +139,14 @@ def get_playable_podcast3(soup3):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/Promo_PlayMe-sm.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -170,14 +170,14 @@ def get_playable_podcast4(soup4):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-thecurrent-sm.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -201,14 +201,14 @@ def get_playable_podcast5(soup5):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-hunting-warhead-sm.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -232,14 +232,14 @@ def get_playable_podcast6(soup6):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/frontburner-podcast-template.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -263,14 +263,14 @@ def get_playable_podcast7(soup7):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/thepit-podcast-template.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -294,14 +294,14 @@ def get_playable_podcast8(soup8):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/sactioned-podcast-template.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -325,14 +325,14 @@ def get_playable_podcast9(soup9):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-secretsofthefifthestate-sm.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -356,14 +356,14 @@ def get_playable_podcast10(soup10):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/slumtown-podcast-template.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -387,14 +387,14 @@ def get_playable_podcast11(soup11):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://images.radio-canada.ca/c_scale,w_780,q_auto/v1/cbc-music/programs/1x1/spark.png",
         }
         subjects.append(item) 
     return subjects
@@ -418,14 +418,14 @@ def get_playable_podcast12(soup12):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/wiretap2020-podcast-template.jpg",
         }
         subjects.append(item) 
     return subjects
@@ -449,14 +449,14 @@ def get_playable_podcast13(soup13):
             print("\n\nLink: ", link)
             title = content.find('title')
             title = title.get_text()
-            thumbnail = content.find('itunes:image')
-            thumbnail = thumbnail.get('href')
+#            thumbnail = content.find('itunes:image')
+#            thumbnail = thumbnail.get('href')
         except AttributeError:
             continue
         item = {
                 'url': link,
                 'title': title,
-                'thumbnail': thumbnail,
+                'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/world-on-fire-podcast-template.jpg",
         }
         subjects.append(item) 
     return subjects
