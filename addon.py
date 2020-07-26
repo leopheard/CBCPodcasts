@@ -14,14 +14,19 @@ url10 = "https://www.cbc.ca/podcasting/includes/slumtown.xml" #Slumtown
 url11 = "https://www.cbc.ca/podcasting/includes/spark.xml" #Spark
 url12 = "https://www.cbc.ca/podcasting/includes/wiretap2020.xml" #Wiretap
 url13 = "https://www.cbc.ca/podcasting/includes/worldonfire.xml" #WorldOnFire
+url14 = "https://www.cbc.ca/podcasting/includes/thebandplayedon.xml" #BandPlayedOn
+url15 = "https://podcasts.files.bbci.co.uk/b01mk3f8.rss" #ShortCuts
+url16 = "https://www.cbc.ca/podcasting/includes/cf.xml" #ComedyFactory
+url17 = "https://www.cbc.ca/podcasting/includes/atissue.xml" #NewsAtIssue
+
 @plugin.route('/')
 def main_menu():
     items = [
-        {
-            'label': plugin.get_string(30000),
-            'path': "",
-            'thumbnail': "", 
-            'is_playable': True},
+#        {
+#            'label': plugin.get_string(30000),
+#            'path': "",
+#            'thumbnail': "https://i.cbc.ca/1.4851944.1538750148!/fileImage/httpImage/image.png_gen/derivatives/16x9_780/cbc-podcasts.png", 
+#            'is_playable': True},
         {
             'label': plugin.get_string(30001),
             'path': plugin.url_for('episodes1'),
@@ -74,6 +79,22 @@ def main_menu():
             'label': plugin.get_string(30013),
             'path': plugin.url_for('episodes13'),
             'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/world-on-fire-podcast-template.jpg"},
+        {
+            'label': plugin.get_string(30014),
+            'path': plugin.url_for('episodes14'),
+            'thumbnail': "http://ichef.bbci.co.uk/images/ic/3000x3000/p05bs2wd.jpg"},
+        {
+            'label': plugin.get_string(30015),
+            'path': plugin.url_for('episodes15'),
+            'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-cf-sm.jpg"},
+        {
+            'label': plugin.get_string(30016),
+            'path': plugin.url_for('episodes16'),
+            'thumbnail': "http://ichef.bbci.co.uk/images/ic/3000x3000/p05bs2wd.jpg"},
+        {
+            'label': plugin.get_string(30017),
+            'path': plugin.url_for('episodes17'),
+            'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/atissue-master-podcast-template.jpg"},
     ]
     return items
 
@@ -155,5 +176,30 @@ def episodes13():
     playable_podcast13 = mainaddon.get_playable_podcast13(soup13)
     items = mainaddon.compile_playable_podcast13(playable_podcast13)
     return items
+@plugin.route('/episodes14/')
+def episodes14():
+    soup14 = mainaddon.get_soup14(url14)
+    playable_podcast14 = mainaddon.get_playable_podcast14(soup14)
+    items = mainaddon.compile_playable_podcast14(playable_podcast14)
+    return items
+@plugin.route('/episodes15/')
+def episodes15():
+    soup15 = mainaddon.get_soup15(url15)
+    playable_podcast15 = mainaddon.get_playable_podcast15(soup15)
+    items = mainaddon.compile_playable_podcast15(playable_podcast15)
+    return items
+@plugin.route('/episodes16/')
+def episodes16():
+    soup16 = mainaddon.get_soup16(url16)
+    playable_podcast16 = mainaddon.get_playable_podcast16(soup16)
+    items = mainaddon.compile_playable_podcast16(playable_podcast16)
+    return items
+@plugin.route('/episodes17/')
+def episodes17():
+    soup17 = mainaddon.get_soup17(url17)
+    playable_podcast17 = mainaddon.get_playable_podcast17(soup17)
+    items = mainaddon.compile_playable_podcast17(playable_podcast17)
+    return items
+
 if __name__ == '__main__':
     plugin.run()

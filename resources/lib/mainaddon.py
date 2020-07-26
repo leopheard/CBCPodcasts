@@ -67,6 +67,26 @@ def get_soup13(URL13):
     soup13 = BeautifulSoup(page.text, 'html.parser')
     print("type: ", type(soup13))
     return soup13
+def get_soup14(URL14):
+    page = requests.get(URL14)
+    soup14 = BeautifulSoup(page.text, 'html.parser')
+    print("type: ", type(soup14))
+    return soup14
+def get_soup15(URL15):
+    page = requests.get(URL15)
+    soup15 = BeautifulSoup(page.text, 'html.parser')
+    print("type: ", type(soup15))
+    return soup15
+def get_soup16(URL16):
+    page = requests.get(URL16)
+    soup16 = BeautifulSoup(page.text, 'html.parser')
+    print("type: ", type(soup16))
+    return soup16
+def get_soup17(URL17):
+    page = requests.get(URL17)
+    soup17 = BeautifulSoup(page.text, 'html.parser')
+    print("type: ", type(soup17))
+    return soup17
 
 def get_playable_podcast1(soup1):
     subjects = []
@@ -470,3 +490,128 @@ def compile_playable_podcast13(playable_podcast13):
             'is_playable': True,
     })
     return items
+
+def get_playable_podcast14(soup14):
+    subjects = []
+    for content in soup14.find_all('item'):
+        try:        
+            link = content.find('enclosure')
+            link = link.get('url')
+            print("\n\nLink: ", link)
+            title = content.find('title')
+            title = title.get_text()
+            thumbnail = content.find('itunes:image')
+            thumbnail = thumbnail.get('href')
+        except AttributeError:
+            continue
+        item = {
+                'url': link,
+                'title': title,
+                'thumbnail': "",
+        }
+        subjects.append(item) 
+    return subjects
+def compile_playable_podcast14(playable_podcast14):
+    items = []
+    for podcast in playable_podcast14:
+        items.append({
+            'label': podcast['title'],
+            'thumbnail': podcast['thumbnail'],
+            'path': podcast['url'],
+            'is_playable': True,
+    })
+    return items
+
+def get_playable_podcast15(soup15):
+    subjects = []
+    for content in soup15.find_all('item'):
+        try:        
+            link = content.find('enclosure')
+            link = link.get('url')
+            print("\n\nLink: ", link)
+            title = content.find('title')
+            title = title.get_text()
+            thumbnail = content.find('itunes:image')
+            thumbnail = thumbnail.get('href')
+        except AttributeError:
+            continue
+        item = {
+                'url': link,
+                'title': title,
+                'thumbnail': "",
+        }
+        subjects.append(item) 
+    return subjects
+def compile_playable_podcast15(playable_podcast15):
+    items = []
+    for podcast in playable_podcast15:
+        items.append({
+            'label': podcast['title'],
+            'thumbnail': podcast['thumbnail'],
+            'path': podcast['url'],
+            'is_playable': True,
+    })
+    return items
+
+def get_playable_podcast16(soup16):
+    subjects = []
+    for content in soup16.find_all('item'):
+        try:        
+            link = content.find('enclosure')
+            link = link.get('url')
+            print("\n\nLink: ", link)
+            title = content.find('title')
+            title = title.get_text()
+            thumbnail = content.find('itunes:image')
+            thumbnail = thumbnail.get('href')
+        except AttributeError:
+            continue
+        item = {
+                'url': link,
+                'title': title,
+                'thumbnail': "",
+        }
+        subjects.append(item) 
+    return subjects
+def compile_playable_podcast16(playable_podcast16):
+    items = []
+    for podcast in playable_podcast16:
+        items.append({
+            'label': podcast['title'],
+            'thumbnail': podcast['thumbnail'],
+            'path': podcast['url'],
+            'is_playable': True,
+    })
+    return items
+
+def get_playable_podcast17(soup17):
+    subjects = []
+    for content in soup17.find_all('item'):
+        try:        
+            link = content.find('enclosure')
+            link = link.get('url')
+            print("\n\nLink: ", link)
+            title = content.find('title')
+            title = title.get_text()
+            thumbnail = content.find('itunes:image')
+            thumbnail = thumbnail.get('href')
+        except AttributeError:
+            continue
+        item = {
+                'url': link,
+                'title': title,
+                'thumbnail': "",
+        }
+        subjects.append(item) 
+    return subjects
+def compile_playable_podcast17(playable_podcast17):
+    items = []
+    for podcast in playable_podcast17:
+        items.append({
+            'label': podcast['title'],
+            'thumbnail': podcast['thumbnail'],
+            'path': podcast['url'],
+            'is_playable': True,
+    })
+    return items
+
