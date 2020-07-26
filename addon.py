@@ -82,7 +82,7 @@ def main_menu():
         {
             'label': plugin.get_string(30014),
             'path': plugin.url_for('episodes14'),
-            'thumbnail': "http://ichef.bbci.co.uk/images/ic/3000x3000/p05bs2wd.jpg"},
+            'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-bandplayedon.jpg"},
         {
             'label': plugin.get_string(30015),
             'path': plugin.url_for('episodes15'),
