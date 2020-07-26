@@ -646,7 +646,7 @@ def get_playable_podcast18(soup18):
         }
         subjects.append(item) 
     return subjects
-def compile_playable_podcast17(playable_podcast18):
+def compile_playable_podcast18(playable_podcast18):
     items = []
     for podcast in playable_podcast18:
         items.append({
