@@ -615,3 +615,67 @@ def compile_playable_podcast17(playable_podcast17):
     })
     return items
 
+def get_playable_podcast18(soup18):
+    subjects = []
+    for content in soup18.find_all('item'):
+        try:        
+            link = content.find('enclosure')
+            link = link.get('url')
+            print("\n\nLink: ", link)
+            title = content.find('title')
+            title = title.get_text()
+            thumbnail = content.find('itunes:image')
+            thumbnail = thumbnail.get('href')
+        except AttributeError:
+            continue
+        item = {
+
+                'url': link,
+                'title': title,
+                'thumbnail': "",
+        }
+        subjects.append(item) 
+    return subjects
+def compile_playable_podcast17(playable_podcast18):
+    items = []
+    for podcast in playable_podcast18:
+        items.append({
+            'label': podcast['title'],
+            'thumbnail': podcast['thumbnail'],
+            'path': podcast['url'],
+            'is_playable': True,
+    })
+    return items
+
+def get_playable_podcast19(soup19):
+    subjects = []
+    for content in soup19.find_all('item'):
+        try:        
+            link = content.find('enclosure')
+            link = link.get('url')
+            print("\n\nLink: ", link)
+            title = content.find('title')
+            title = title.get_text()
+            thumbnail = content.find('itunes:image')
+            thumbnail = thumbnail.get('href')
+        except AttributeError:
+            continue
+        item = {
+
+                'url': link,
+                'title': title,
+                'thumbnail': "",
+        }
+        subjects.append(item) 
+    return subjects
+def compile_playable_podcast19(playable_podcast19):
+    items = []
+    for podcast in playable_podcast19:
+        items.append({
+            'label': podcast['title'],
+            'thumbnail': podcast['thumbnail'],
+            'path': podcast['url'],
+            'is_playable': True,
+    })
+    return items
+

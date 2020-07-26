@@ -18,6 +18,8 @@ url14 = "https://www.cbc.ca/podcasting/includes/thebandplayedon.xml" #BandPlayed
 url15 = "https://podcasts.files.bbci.co.uk/b01mk3f8.rss" #ShortCuts
 url16 = "https://www.cbc.ca/podcasting/includes/cf.xml" #ComedyFactory
 url17 = "https://www.cbc.ca/podcasting/includes/atissue.xml" #NewsAtIssue
+url18 = "https://rss.art19.com/guru" #Guru:TheDarkSideofEnlighenment
+url19 = "https://www.cbc.ca/podcasting/includes/ambushed.xml" #Ambushed
 
 @plugin.route('/')
 def main_menu():
@@ -95,6 +97,15 @@ def main_menu():
             'label': plugin.get_string(30017),
             'path': plugin.url_for('episodes17'),
             'thumbnail': "https://www.cbc.ca/radio/podcasts/images/950x950/atissue-master-podcast-template.jpg"},
+        {
+            'label': plugin.get_string(30018),
+            'path': plugin.url_for('episodes18'),
+            'thumbnail': "https://content.production.cdn.art19.com/images/0e/6f/5f/1a/0e6f5f1a-f9b5-44c0-ac02-4da2114f453b/f8a06235821d9afc7bb16a4a0676e6230252b15fd07b57d5e4e96a360073967cfe15d0524b1b2af4441b1f509b3815bb9ce6eb1ec29540bca4e73f0468e00ef1.jpeg"},
+        {
+            'label': plugin.get_string(30019),
+            'path': plugin.url_for('episodes19'),
+            'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-ambushed.jpg"},
+
     ]
     return items
 
@@ -199,6 +210,18 @@ def episodes17():
     soup17 = mainaddon.get_soup17(url17)
     playable_podcast17 = mainaddon.get_playable_podcast17(soup17)
     items = mainaddon.compile_playable_podcast17(playable_podcast17)
+    return items
+@plugin.route('/episodes18/')
+def episodes18():
+    soup18 = mainaddon.get_soup18(url18)
+    playable_podcast18 = mainaddon.get_playable_podcast18(soup18)
+    items = mainaddon.compile_playable_podcast18(playable_podcast18)
+    return items
+@plugin.route('/episodes19/')
+def episodes19():
+    soup19 = mainaddon.get_soup19(url19)
+    playable_podcast19 = mainaddon.get_playable_podcast19(soup19)
+    items = mainaddon.compile_playable_podcast19(playable_podcast19)
     return items
 
 if __name__ == '__main__':

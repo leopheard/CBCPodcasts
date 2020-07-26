@@ -70,4 +70,28 @@ msgctxt "#30013"
 msgid "World On Fire"
 msgstr ""
 
+msgctxt "#30014"
+msgid "The Band Played On"
+msgstr ""
+
+msgctxt "#30015"
+msgid "Short Cuts"
+msgstr ""
+
+msgctxt "#30016"
+msgid "Comedy Factory"
+msgstr ""
+
+msgctxt "#30017"
+msgid "News At Issue"
+msgstr ""
+
+msgctxt "#30018"
+msgid "Guru: The Dark Side of Enlightenment"
+msgstr ""
+
+msgctxt "#30019"
+msgid "Ambushed"
+msgstr ""
+
 # empty string with id 32003
