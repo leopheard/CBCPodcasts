@@ -88,11 +88,11 @@ def main_menu():
         {
             'label': plugin.get_string(30015),
             'path': plugin.url_for('episodes15'),
-            'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-cf-sm.jpg"},
+            'thumbnail': "http://ichef.bbci.co.uk/images/ic/3000x3000/p05bs2wd.jpg"},
         {
             'label': plugin.get_string(30016),
             'path': plugin.url_for('episodes16'),
-            'thumbnail': "http://ichef.bbci.co.uk/images/ic/3000x3000/p05bs2wd.jpg"},
+            'thumbnail': "https://www.cbc.ca/radio/podcasts/images/promo-cf-sm.jpg"},
         {
             'label': plugin.get_string(30017),
             'path': plugin.url_for('episodes17'),
